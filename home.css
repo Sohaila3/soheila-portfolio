@@ -4,7 +4,75 @@ body {
   font-family: 'Arial', sans-serif;
   overflow-x: hidden;
 }
+/* --- Navigation Bar --- */
+.navbar {
+  background-color: rgba(251, 249, 249, 0.375); /* Slightly transparent background */
+  padding: 10px 20px;
+  position: fixed; /* Keep it at the top when scrolling */
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000; /* Ensure it stays above other content */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
 
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.navbar-logo img {
+  height: 40px; /* Adjust logo size as needed */
+  vertical-align: middle;
+  transition: transform 0.3s ease;
+}
+
+.navbar-logo img:hover {
+  transform: scale(1.1);
+}
+
+.nav-links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.nav-links li {
+  margin-left: 20px;
+}
+
+.nav-links a {
+  color: rgb(44, 39, 39);
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.1em;
+  transition: color 0.3s ease, transform 0.3s ease;
+  position: relative; /* For the underline effect */
+}
+
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background-color: #5788c0; /* Blue underline */
+  left: 0;
+  bottom: -5px;
+  transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+.nav-links a:hover {
+  color: #5788c0;
+  transform: translateY(-2px);
+}
 /* Animation Keyframes */
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(40px); }
@@ -56,7 +124,7 @@ body {
 .containA {
   height: 100vh;
   width: 100%;
-  background: url(photo/home.jpg) no-repeat center center/cover;
+  background: url(photo/backgroundrest.jpg) no-repeat center center/cover;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -83,7 +151,7 @@ body {
 }
 
 .pageone img {
-  width: 100px;
+  width: 300px;
   margin-bottom: 15px;
   animation: fadeIn 1s ease-out, pulse 2s infinite;
 }
@@ -251,70 +319,98 @@ hr {
   flex-grow: 1;
 }
 
-/* Footer Styles */
+/* --- Footer Styles --- */
 .footer {
   background-color: #333;
   color: white;
-  padding: 10px 0 15px;
+  padding: 20px 0 20px;
   text-align: center;
 }
 
 .footer-content {
-  max-width: 1200px;
+  max-width: 900px; /* Adjusted max-width for better two-column layout */
   margin: 0 auto;
-  padding: 0 20px;
-}
-
-.contact-info {
-  margin-bottom: 25px;
-}
-
-.contact-info h3 {
-  font-size: 1.5em;
-  margin-bottom: 15px;
-  color: #fff;
-}
-
-.contact-info p {
-  margin: 8px 0;
-  font-size: 1em;
-  color: #ddd;
-}
-
-.contact-info i {
-  margin-right: 8px;
-  color: #5788c0;
-}
-
-.social-links {
+  padding: 0 10px;
   display: flex;
-  justify-content: center;
-  gap: 25px;
-  margin-top: 15px;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 30px;
+  margin-bottom: 30px;
 }
 
-.social-links a {
-  color: #5788c0;
+.footer-section {
+  flex: 1;
+  min-width: 280px; /* Slightly increased min-width */
+  text-align: center;
+}
+
+.footer-section h3 {
+  font-size: 1.5em;
+  margin-bottom: 20px; /* More space below heading */
+  color: #fff;
+  position: relative;
+}
+
+.footer-section h3::after {
+  content: '';
+  display: block;
+  width: 50px;
+  height: 2px;
+  background: #5788c0;
+  margin: 10px auto 0;
+}
+
+/* Styles for the contact and social links group */
+.contact-links-group,
+.social-links-group {
+  display: flex;
+  flex-direction: column; /* Stack items vertically */
+  align-items: center; /* Center items horizontally */
+  gap: 15px; /* Space between each contact/social item */
+}
+
+.contact-item,
+.social-item {
+  display: flex;
+  align-items: center; /* Align icon and text/label */
+  gap: 10px; /* Space between icon and text/label */
+  color: #ddd;
   text-decoration: none;
   font-size: 1em;
-  transition: color 0.3s ease;
-  display: flex;
-  align-items: center;
+  transition: color 0.3s ease, transform 0.3s ease;
 }
 
-.social-links a:hover {
-  color: #bfbdbd;
+.contact-item:hover,
+.social-item:hover {
+  color: #5788c0;
+  transform: translateX(5px); /* Slight movement on hover */
 }
 
-.social-links i {
-  margin-right: 6px;
-  font-size: 1.1em;
+.contact-item p,
+.social-item p {
+  margin: 0; /* Remove default paragraph margin */
+  color: inherit; /* Inherit color from parent a tag */
 }
+
+.contact-icon,
+.social-icon {
+  width: 28px; /* Size for your icons */
+  height: 28px;
+  object-fit: contain;
+  vertical-align: middle;
+  transition: transform 0.3s ease;
+}
+
+.contact-item:hover .contact-icon,
+.social-item:hover .social-icon {
+  transform: scale(1.1);
+}
+
 
 .copyright {
   border-top: 1px solid #444;
   padding-top: 15px;
-  margin-top: 15px;
+  margin-top: 30px; /* More space above copyright */
   color: #5b5a5a;
   font-size: 0.85em;
 }
@@ -340,6 +436,26 @@ hr {
     padding: 20px 0;
     margin-top: 30px;
   }
+
+  .nav-links {
+    flex-direction: column; /* Stack nav links on smaller screens */
+    align-items: flex-end; /* Align to the right */
+    position: absolute;
+    top: 60px; /* Below the navbar */
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    width: 100%;
+    padding: 15px 0;
+    display: none; /* Hidden by default for mobile toggle */
+  }
+
+  .nav-links.active {
+    display: flex; /* Show when active */
+  }
+
+  .nav-links li {
+    margin: 10px 20px;
+  }
 }
 
 @media (max-width: 768px) {
@@ -362,6 +478,31 @@ hr {
   .title-animate {
     font-size: 2.2em;
   }
+
+  .navbar-container {
+    flex-wrap: wrap; /* Allow logo and links to wrap */
+    justify-content: center;
+  }
+
+  .navbar-logo {
+    margin-bottom: 10px;
+  }
+
+  .footer-content {
+    flex-direction: column; /* Stack footer content */
+    align-items: center;
+  }
+
+  .footer-section {
+    min-width: unset; /* Remove min-width for stacking */
+    width: 100%;
+    margin-bottom: 30px; /* Space between stacked sections */
+  }
+
+  .contact-links-group,
+  .social-links-group {
+    align-items: center;
+  }
 }
 
 @media (max-width: 480px) {
@@ -373,12 +514,21 @@ hr {
     font-size: 1.8em;
   }
   
-  .social-links {
-    flex-direction: column;
-    gap: 12px;
+  .contact-item, .social-item {
+    font-size: 0.9em; /* Smaller font for very small screens */
   }
-  
-  .contact-info h3 {
+
+  .contact-icon, .social-icon {
+    width: 24px;
+    height: 24px;
+  }
+
+  .contact-info h3, .social-links-footer h3 {
     font-size: 1.3em;
+  }
+
+  .btn {
+    padding: 10px 15px;
+    font-size: 0.75em;
   }
 }

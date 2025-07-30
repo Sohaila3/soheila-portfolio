@@ -8,13 +8,24 @@
   <link rel="icon" type="image/png" href="photo/favicon.png" />
 </head>
 <body>
-
+  <nav class="navbar">
+    <div class="navbar-container">
+      <a href="#" class="navbar-logo">
+        <img src="photo/logofrench.png" alt="Restaurant Logo" /> </a>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#our-store">Our Store</a></li>
+        <li><a href="#special-dishes">Dishes</a></li>
+        <li><a href="#contact-us">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
   <!-- Page One -->
-  <div class="containA">
+  <div class="containA" id="home">
     <div class="pageone">
-      <img src="photo/restaurant.png" alt="Restaurant Logo" class="logo-animate" />
+      <img src="photo/logofrench-removebg.png" alt="Restaurant Logo" class="logo-animate" />
       <h1 class="title-animate">French Restaurant</h1>
-      <p class="subtitle-animate">We're the best restaurant in town</p>
+      <p class="subtitle-animate">We're the best restaurant in Paris</p>
       <div class="button-group">
         <button class="btn mo">Learn More</button>
         <button class="btn dodo">Book a Visit</button>
@@ -23,8 +34,8 @@
   </div>
 
   <!-- Page Two -->
-  <div class="pagetwo">
-    <img src="photo/chef-2.jpg" alt="Chef Image" class="chef-img" />
+  <div class="pagetwo" id="our-store">
+    <img src="photo/chefgirl.webp" alt="Chef Image" class="chef-img" />
     <div class="texttwo">
       <h2><span>OUR</span> STORE</h2>
       <p>
@@ -40,7 +51,7 @@
   </div>
 
   <!-- Page Four -->
-  <div class="allpagefour">
+  <div class="allpagefour" id="special-dishes">
     <h2 class="menu-title">Our Special Dishes</h2>
     <div class="menu-container">
       <div class="pagefour food-card">
@@ -52,16 +63,32 @@
       </div>
 
       <div class="pagefour food-card">
-        <img src="photo/chicken-alfredo.jpg" alt="Chicken Alfredo" />
-        <h3>Chicken Alfredo</h3>
+        <img src="photo/Mushroom-Fettuccine-Recipe.jpg" alt="Chicken Alfredo" />
+        <h3> Mushroom Fettuccine</h3>
         <hr />
         <p>Pastry is differentiated from bread by having a higher fat content, which contributes to a flaky or crumbly texture.</p>
         <button class="btn buy">Buy It Now</button>
       </div>
 
       <div class="pagefour food-card">
-        <img src="photo/burgur.jpg" alt="Beef Burger" />
+        <img src="photo/beefburgur.jpg" alt="Beef Burger" />
         <h3>Beef Burger</h3>
+        <hr />
+        <p>Pastry is differentiated from bread by having a higher fat content, which contributes to a flaky or crumbly texture.</p>
+        <button class="btn buy">Buy It Now</button>
+      </div>
+
+      <div class="pagefour food-card">
+        <img src="photo/pizzamargherita1.jpg" alt="Beef Burger" />
+        <h3>Pizza Margherita</h3>
+        <hr />
+        <p>Pastry is differentiated from bread by having a higher fat content, which contributes to a flaky or crumbly texture.</p>
+        <button class="btn buy">Buy It Now</button>
+      </div>
+
+      <div class="pagefour food-card">
+        <img src="photo/chickenburgur.jpg" alt="Beef Burger" />
+        <h3>Chicken Burger</h3>
         <hr />
         <p>Pastry is differentiated from bread by having a higher fat content, which contributes to a flaky or crumbly texture.</p>
         <button class="btn buy">Buy It Now</button>
@@ -77,16 +104,29 @@
     </div>
   </div>
 <!-- Footer Section -->
-  <footer class="footer">
+  <footer class="footer" id="contact-us">
     <div class="footer-content">
-      <div class="contact-info">
-        <h3>Contact Me</h3>
-        <p><i class="fas fa-envelope"></i> sohylakhalil.31@gmail.com</p>
-        <p><i class="fas fa-envelope"></i> +201007375912</p>
-        <div class="social-links">
-          <a href="https://github.com/Sohaila3" target="_blank"><i class="fab fa-github"></i> GitHub</a>
-          <a href="https://www.linkedin.com/in/sohaila-khalil-266391244/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+      <div class="footer-section contact-info">
+        <h3>Contact Info</h3>
+        <div class="contact-links-group">
+          <a href="mailto:sohylakhalil.31@gmail.com" target="_blank" class="contact-item">
+            <img src="photo/GitHub-Mark.png" alt="Email" class="contact-icon" /> <p>sohylakhalil.31@gmail.com</p>
+          </a>
+          <a href="tel:+201007375912" class="contact-item">
+            <img src="photo/WhatsApp.png" alt="Phone" class="contact-icon" /> <p>+201007375912</p>
+          </a>
         </div>
+      </div>
+      <div class="footer-section social-links-footer">
+        <h3>Follow Us</h3>
+        <div class="social-links-group">
+          <a href="https://github.com/Sohaila3" target="_blank" class="social-item">
+            <img src="photo/GitHub-Mark.png" alt="GitHub" class="social-icon" /> <p>GitHub</p>
+          </a>
+          <a href="https://www.linkedin.com/in/sohaila-khalil-266391244/" target="_blank" class="social-item">
+            <img src="photo/linkedin-icon.png" alt="LinkedIn" class="social-icon" /> <p>LinkedIn</p>
+          </a>
+          </div>
       </div>
     </div>
     <div class="copyright">
