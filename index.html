@@ -5,25 +5,26 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Chef</title>
   <link rel="stylesheet" href="home.css" />
-  <link rel="icon" type="image/png" href="favicon.png" />
-
+  <link rel="icon" type="image/png" href="photo/favicon.png" />
 </head>
 <body>
 
   <!-- Page One -->
   <div class="containA">
     <div class="pageone">
-      <img src="restaurant.png" alt="Restaurant Logo" />
-      <h1>French Restaurant</h1>
-      <p>We're the best restaurant in town</p>
-      <button class="btn mo">Learn More</button>
-      <button class="btn dodo">Book a Visit</button>
+      <img src="photo/restaurant.png" alt="Restaurant Logo" class="logo-animate" />
+      <h1 class="title-animate">French Restaurant</h1>
+      <p class="subtitle-animate">We're the best restaurant in town</p>
+      <div class="button-group">
+        <button class="btn mo">Learn More</button>
+        <button class="btn dodo">Book a Visit</button>
+      </div>
     </div>
   </div>
 
   <!-- Page Two -->
   <div class="pagetwo">
-    <img src="chef-2.jpg" alt="Chef Image" />
+    <img src="photo/chef-2.jpg" alt="Chef Image" class="chef-img" />
     <div class="texttwo">
       <h2><span>OUR</span> STORE</h2>
       <p>
@@ -33,47 +34,64 @@
     </div>
   </div>
 
-  <!-- Page Three (Sticky Image) -->
-  <div class="pagethree-wrapper">
-    <div class="pagethree">
-      <img src="bg-home.jpg" alt="Sticky Background Image" />
-    </div>
+  <!-- Page Three (Parallax Image) -->
+  <div class="pagethree">
+    <div class="parallax-img"></div>
   </div>
 
   <!-- Page Four -->
   <div class="allpagefour">
-    <div class="pagefour">
-      <img src="Grilled-Beef-Steak-thumbnail.jpg" alt="Grilled Beef Steak" />
-      <h3>Grilled Beef Steak</h3>
-      <hr />
-      <p>Pastry is differentiated from bread by having a higher fat content, which contributes to a flaky or crumbly texture.</p>
-      <button class="btn buy">Buy It Now</button>
-    </div>
+    <h2 class="menu-title">Our Special Dishes</h2>
+    <div class="menu-container">
+      <div class="pagefour food-card">
+        <img src="photo/Grilled-Beef-Steak-thumbnail.jpg" alt="Grilled Beef Steak" />
+        <h3>Grilled Beef Steak</h3>
+        <hr />
+        <p>Pastry is differentiated from bread by having a higher fat content, which contributes to a flaky or crumbly texture.</p>
+        <button class="btn buy">Buy It Now</button>
+      </div>
 
-    <div class="pagefour">
-      <img src="chicken-alfredo.jpg" alt="Chicken Alfredo" />
-      <h3>Chicken Alfredo</h3>
-      <hr />
-      <p>Pastry is differentiated from bread by having a higher fat content, which contributes to a flaky or crumbly texture.</p>
-      <button class="btn buy">Buy It Now</button>
-    </div>
+      <div class="pagefour food-card">
+        <img src="photo/chicken-alfredo.jpg" alt="Chicken Alfredo" />
+        <h3>Chicken Alfredo</h3>
+        <hr />
+        <p>Pastry is differentiated from bread by having a higher fat content, which contributes to a flaky or crumbly texture.</p>
+        <button class="btn buy">Buy It Now</button>
+      </div>
 
-    <div class="pagefour">
-      <img src="burgur.jpg" alt="Beef Burger" />
-      <h3>Beef Burger</h3>
-      <hr />
-      <p>Pastry is differentiated from bread by having a higher fat content, which contributes to a flaky or crumbly texture.</p>
-      <button class="btn buy">Buy It Now</button>
-    </div>
+      <div class="pagefour food-card">
+        <img src="photo/burgur.jpg" alt="Beef Burger" />
+        <h3>Beef Burger</h3>
+        <hr />
+        <p>Pastry is differentiated from bread by having a higher fat content, which contributes to a flaky or crumbly texture.</p>
+        <button class="btn buy">Buy It Now</button>
+      </div>
 
-    <div class="pagefour">
-      <img src="Sirloin-Steak-24.jpg" alt="Sirloin Steak" />
-      <h3>Beef Steak</h3>
-      <hr />
-      <p>Pastry is differentiated from bread by having a higher fat content, which contributes to a flaky or crumbly texture.</p>
-      <button class="btn buy">Buy It Now</button>
+      <div class="pagefour food-card">
+        <img src="photo/Sirloin-Steak-24.jpg" alt="Sirloin Steak" />
+        <h3>Beef Steak</h3>
+        <hr />
+        <p>Pastry is differentiated from bread by having a higher fat content, which contributes to a flaky or crumbly texture.</p>
+        <button class="btn buy">Buy It Now</button>
+      </div>
     </div>
   </div>
-
+<!-- Footer Section -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="contact-info">
+        <h3>Contact Me</h3>
+        <p><i class="fas fa-envelope"></i> sohylakhalil.31@gmail.com</p>
+        <p><i class="fas fa-envelope"></i> +201007375912</p>
+        <div class="social-links">
+          <a href="https://github.com/Sohaila3" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+          <a href="https://www.linkedin.com/in/sohaila-khalil-266391244/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+        </div>
+      </div>
+    </div>
+    <div class="copyright">
+      <p>&copy; 2025 Sohaila Khalil. All rights reserved.</p>
+    </div>
+  </footer>
 </body>
 </html>
